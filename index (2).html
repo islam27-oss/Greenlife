@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Green Life</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <style>
+     *{
+       box-sizing: border-box;
+       margin: 0;
+     }
+     
+     :root {
+      --primary: #58664D;
+      --dark: #414C3A;
+      --background: #F5F2E9;
+      --card: #FAF8F2;
+      --text: #292D27;
+      --border: #E1DBCA;
+      --white: #ffffff; 
+     }
+    
+     body {
+      background-color: var(--background);
+      color: var(--text);
+    }
+    header {
+      padding: 13px 0 ;
+      background: var(--primary);
+      text-align: center;
+      box-shadow: 0 5px 25px rgba(0,0, 0, 0.3);
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+    h3 {
+      display: inline-block;
+      color: var(--white);
+      font-size: 21px ; 
+      
+    }
+     header div {
+       display: inline-block;
+     }
+     i {
+       font-size: 17px;
+       color: var(--white);
+     }
+     .center {
+       margin: 0 65px ;
+     }
+     
+     /* hero */
+     .hero {
+       width: 100%;
+       height: 205px;
+       background-image: url("hero.jpg");
+       background-repeat: no-repeat;
+       background-size: cover;
+       padding: 45px 20px ;
+       margin-top: 50px;
+       object-fit: cover ; 
+     }
+     .hero-text {
+       font-size: 0;
+       width: 65%;
+       text-align: left;
+     }
+     .hero-label {
+       color: var(--primary);
+       font-size: 15px;
+       font-weight: bold;
+       margin-bottom: 7px;
+     }
+     .hero-text h1 {
+       color: var(--dark);
+       font-size: 29px;
+       margin-bottom: 7px;
+     }
+     .hero-desc {
+       color: var(--primary);
+       font-size: 14px;
+       margin-bottom: 7px;
+     }
+     .hero-text button {
+       background:var(--dark);
+       color: var(--card);
+       border:none;
+       border-radius: 6px;
+       padding: 8px 10px;
+       font-size: 11px ; 
+     }
+     button.shop {
+       margin-right:10px ;
+     }
+     /* three icon*/
+     .three-icon {
+       text-align: center;
+       font-size: 0;
+       padding: 20px 0;
+     }
+     .three-icon > div {
+       display: inline-block;
+       width: 25%;
+       padding: 10px 2px;
+     }
+     .three-icon .big-tree {
+       margin: 0 20px ; 
+     }
+     .three-icon i {
+       color: var(--primary);
+       font-size: 20px;
+     }
+     .three-icon h5 {
+       color: var(--primary);
+       font-size: 11px;
+       margin: 5px 0;
+     }
+     .three-icon p {
+       color : var(--primary);
+       font-size: 10px;
+     }
+
+    /* Categoris */
+     .categ{
+       width: 100%;
+       padding: 5px 15px;
+       background: var(--primary);
+     }
+     .categ-title {
+       color: var(--card);
+       text-align: center;
+       font-size: 20px;
+       margin-top: 10px;
+     }
+     .categ-desc {
+       color: var(--border);
+       text-align: center;
+       font-size: 15px ; 
+       margin: 5px 0 ; 
+     }
+     .categ-pro {
+       padding: 15px 5px;
+       width: 100%;
+       text-align: center;
+       font-size: 0;
+     }
+     .first-pro,
+     .second-pro {
+       display : inline-block;
+       width: 46%;
+       vertical-align: top;
+       font-size: 14px;
+       padding: 2px;
+       background:var(--card);
+       border:1px solid var(--border);
+       border-radius: 7px;
+     }
+     .first-pro{
+       margin-right: 8% ;  
+     }
+     .first-pro img,
+     .second-pro img {
+       width: 100% ;
+       height: 80px;
+       object-fit: cover;
+       border-radius: 7px;
+     }
+     .first-pro h5, 
+     .second-pro h5 {
+       color: var(--dark);
+       font-size: 15px;
+       margin: 8px 0 4px;
+     }
+     
+     .first-pro p,
+     .second-pro p {
+       color: var(--primary);
+       font-size: 16px;
+       font-weight:  bold;
+       margin :4px 0 8px ;
+     }
+     
+     .first-pro button, 
+     .second-pro button {
+       background: var(--primary);
+       color: var(--white);
+       border: none;
+       padding: 7px 10px;
+       border-radius: 5px;
+       font-weight: bold;
+     }
+     
+     /* About */
+     .about {
+       width: 100%;
+       min-height: 170px;
+       background-image: url("about.png");
+       background-repeat: no-repeat ; 
+       background-size: cover;
+     }
+     .about-text {
+       width: 60%;
+       text-align: left;
+       margin: 40px 20px;
+     }
+     .about-text h2 {
+       color: var(--dark);
+       font-size: 22px;
+     }
+     .about-text p {
+       color: var(--text);
+       font-size: 13px;
+       line-height: 1.6;
+       margin: 10px 0;
+     }
+     .about-text button {
+       background: var(--primary);
+       color: var(--white);
+       border: none;
+       padding: 9px 12px;
+       font-size: 12px;
+       border-radius: 7px;
+     }
+     .teeee {
+       border: 2px solid ;
+     }
+     
+     /* Reviews */
+     .reviews {
+       border-top: 3px solid var(--dark);
+       background: #f9f6ed;
+       padding: 25px 20px;
+     }
+     .review-stars {
+       color: #d9a441;
+       font-size: 20px;
+     }
+     .review-text {
+       color: var(--text);
+       font-size: 13px;
+       margin-bottom: 5px;
+     }
+     .review-name {
+       color: var(--text);
+       margin-bottom: 5px;
+
+       font-size: 14px ; 
+     }
+     .reviews-title {
+       color: var(--dark);
+       font-size: 22px;
+     }
+     .reviews-desc {
+       color: var(--text);
+       font-size: 20px;
+       margin-bottom: 10px;
+     }
+     .review-card {
+       width: 100%;
+       border: 1.5px solid var(--text);
+       background: var(--background);
+       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+       border-radius: 9px;
+       padding: 12px 12px;
+       margin-bottom: 15px;
+     }
+     
+     footer{
+       width: 100%;
+       background: var(--primary);
+       padding: 13px 10px;
+       text-align: center;
+     }
+     footer p {
+       font-size: 12px;
+       color: var(--border);
+     }
+   </style>
+ </head>
+ <body>
+    <header>
+      <div class="icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="center">
+       <h3>Green Life</h3>
+      </div> 
+      <div class="icon-log">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+    </header>
+    
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-label">
+          BRING NATURE HOME
+        </p>
+        <h1>Green life</h1>
+        <p class="hero-desc">Fresh plants For a happier healthier home .</p>
+        <button class="shop">Shop Now</button>
+        <button>Explore More</button>
+      </div>
+    </section>
+    
+    <section class="three-icon">
+        <div class="small-tree">
+          <i class="fa-solid fa-leaf"></i>
+          <h5>Natural beauty</h5>
+          <p>Pure & healthy</p>
+        </div>
+        <div class="big-tree">
+          <i class="fa-solid fa-seedling"></i>
+          <h5>Easy care</h5>
+          <p>Perfect for everyone</p>
+        </div>
+        <div class="fast">
+          <i class="fa-solid fa-truck"></i>
+          <h5>Fast delivery</h5>
+          <p>To your doorstep</p>
+        </div>
+      </section>
+      
+    <section class="categ">
+         <h2 class="categ-title">Explore Our Plants</h2>
+         <p class="categ-desc">Find the perfect plant for your home</p>
+         <!-- first line -->
+        <div class="categ-pro">
+          <div class="first-pro">
+            <img src="tree 1.jpg" alt="">
+            <h5>Snake Plant</h5>
+            <p>$25.00</p>
+            <button>Add to cart</button>
+          </div>
+          
+          <div class="second-pro">
+            <img src="tree 2.jpg" alt="">
+            <h5>Monstera plnt</h5>
+            <p>$35.00</p>
+            <button>Add to cart</button>
+          </div>
+          
+        </div>
+        <!-- second line -->
+        <div class="categ-pro">
+          <div class="first-pro">
+            <img src="tree 4.jpg" alt="">
+            <h5>Jade Plant</h5>
+            <p>$85.00</p>
+            <button>Add to cart</button>
+          </div>
+          
+          <div class="second-pro">
+            <img src="tree 5.jpg" alt="">
+            <h5>Tree Palnt</h5>
+            <p>$55.00</p>
+            <button>Add to cart</button>
+          </div>
+          
+        </div>
+      </section>
+      
+    <!-- About -->
+    <section class="about">
+      <div class="about-text">
+        <h2>About Green Life</h2>
+        <p>We bring nature closer to your home
+            with beautiful and easy care plants for you
+        </p>
+        <button>Learn More</button>
+      </div>
+    </section>  
+    
+    <!-- Customer Reviews -->
+    <section class="reviews">
+      <h2 class="reviews-title">Cstomer Reviews</h2>
+      <p class="reviews-desc">What our plant lovers say</p>
+      <!-- First review -->
+      <div class="review-card">
+        <div class="review-stars">
+          ★★★★★
+        </div>
+        <p class="review-text">Beautifal plants and amazing quality!</p>
+        <h4 class="review-name">Nour Nageh</h4>
+        <p class="review-job">Happy Customer</p>
+      </div>
+      
+      
+      
+      <!-- Second review -->
+      <div class="review-card">
+        <div class="review-stars">
+          ★★★★★
+        </div>
+        <p class="review-text">Beautifal plants and amazing quality!</p>
+        <h4 class="review-name"class=>Islam mohammed</h4>
+        <p class="review-job">Happy Customer</p>
+      </div>
+      
+      <!-- Third review -->
+      <div class="review-card">
+        <div class="review-stars">
+          ★★★★★
+        </div>
+        <p class="review-text">Beautifal plants and amazing quality!</p>
+        <h4 class="review-name">Mona Hassan</h4>
+        <p class="review-job">Happy Customer</p>
+      </div>
+    </section>
+    
+    <footer>
+          <p class="footer-copy">
+      &copy; 2026 Green Life. All rights reserved.
+    </p>
+    </footer>
+ </body>
+</html>
